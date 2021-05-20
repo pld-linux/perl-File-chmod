@@ -7,15 +7,17 @@
 Summary:	File::chmod - Implements symbolic and ls chmod modes
 Summary(pl.UTF-8):	File::chmod - implementacja uprawnień symbolicznych i ls funkcji chmod
 Name:		perl-File-chmod
-Version:	0.32
+Version:	0.42
 Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/File/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	0048eb67fffad544e1cc07e04c33b0b2
-URL:		http://search.cpan.org/dist/File-chmod/
+# Source0-md5:	b94807f4bef13506ee529a214524f9de
+URL:		https://metacpan.org/release/File-chmod
+BuildRequires:	perl-ExtUtils-MakeMaker
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -57,4 +59,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes
 %{perl_vendorlib}/File/chmod.pm
-%{_mandir}/man3/*
+%{_mandir}/man3/File::chmod.3pm*
